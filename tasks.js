@@ -7,7 +7,7 @@ function rowSumOddNumbers(n) {
 }
 
 function index(array, n) {
-    if (array.length >= n){
+    if (array.length >= n + 1){
         return Math.pow(array[n],n)
     }else {
         return -1
