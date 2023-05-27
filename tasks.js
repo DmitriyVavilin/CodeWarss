@@ -27,3 +27,24 @@ function boolToWord(bool) {
     return bool === true ? 'Yes' : 'No'
     // Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
 }
+
+function countSheeps(arrayOfSheep) {
+    let result = 0
+    for (let i = 0; i < arrayOfSheep.length; i++)
+        if (arrayOfSheep[i] === true){
+            result++
+        }
+    return result
+    // Consider an array/list of sheep where some sheep may be missing from their place. We need a function
+    // that counts the number of sheep present in the array
+    // (true means present).
+    // For example:
+    //     const arrayOfSheep = [true, true, true, false,
+    //         true, true, true, true,
+    //         true, false, true, false,
+    //         true, false, false, true,
+    //         true, true, true, true,
+    //         false, false, true, true]
+}
+
+
