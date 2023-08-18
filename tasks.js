@@ -93,3 +93,14 @@ const linerSearch = (arr, item) => {
 }
 
 
+// const str = 'hello World'
+const firstLetterConversion = (str) => {
+    const words = str.split(' ')
+    return  words.map((el, index) => {
+        if(index === 1) {
+            return el[0].toLowerCase() + el.slice(1)
+        }else{
+            return el[0].toUpperCase() + el.slice(1)
+        }
+    }).join(' ')
+}
