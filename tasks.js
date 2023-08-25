@@ -1,11 +1,9 @@
 function numberToString(num) {
     return num.toString()
 }
-
 function rowSumOddNumbers(n) {
     return n * n * n
 }
-
 function index(array, n) {
     if (array.length >= n + 1){
         return Math.pow(array[n],n)
@@ -21,13 +19,10 @@ function index(array, n) {
 // array = [1, 2, 3, 4] and N = 2, then the result is 3^2 == 9;
 // array = [1, 2, 3] and N = 3, but N is outside of the array, so the result is -1.
 }
-
-
 function boolToWord(bool) {
     return bool === true ? 'Yes' : 'No'
     // Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
 }
-
 function countSheeps(arrayOfSheep) {
     let result = 0
     for (let i = 0; i < arrayOfSheep.length; i++)
@@ -46,7 +41,6 @@ function countSheeps(arrayOfSheep) {
     //         true, true, true, true,
     //         false, false, true, true]
 }
-
 function eachCons(array, n) {
     return array.map((x, y) => array.slice(y, y + n)).filter(x => x.length == n)
 
@@ -57,8 +51,6 @@ function eachCons(array, n) {
 //     each_cons([1,2,3,4], 3)
 // #=> [[1,2,3],[2,3,4]]
 }
-
-// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 const binarySearch = (arr, item) => {
     let start = 0
     let end = arr.length
@@ -81,8 +73,6 @@ const binarySearch = (arr, item) => {
     }
     return position
 }
-
-// const array = [1, 2, 33, 4, 5, 7, 79, 7, 4, 31, 3, 864, 1]
 const linerSearch = (arr, item) => {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === item) {
@@ -91,9 +81,6 @@ const linerSearch = (arr, item) => {
     }
     return null
 }
-
-
-// const str = 'hello World'
 const firstLetterConversion = (str) => {
     const words = str.split(' ')
     return  words.map((el, index) => {
@@ -103,4 +90,17 @@ const firstLetterConversion = (str) => {
             return el[0].toUpperCase() + el.slice(1)
         }
     }).join(' ')
+    // const str = 'hello World'
+}
+function reverseWords(str) {
+    const result = str.split(' ')
+    const words = result.map(word => {
+        return word.split('').reverse().join('')
+    })
+    return  words.join(' ')
+
+    // Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in
+    // the string should be retained.
+    // "This is an example!" ==> "sihT si na !elpmaxe"
+    // "double  spaces"      ==> "elbuod  secaps"
 }
