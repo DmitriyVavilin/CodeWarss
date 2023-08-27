@@ -104,3 +104,15 @@ function reverseWords(str) {
     // "This is an example!" ==> "sihT si na !elpmaxe"
     // "double  spaces"      ==> "elbuod  secaps"
 }
+function solution(digits) {
+    let largestSequence = 0;
+    for (let i = 0; i <= digits.length - 5; i++) {
+        const sequence = digits.substring(i,5)
+        const sequenceNumbers = parseInt(sequence)
+
+        if (sequenceNumbers > largestSequence) {
+            largestSequence = sequenceNumbers
+        }
+    }
+    return largestSequence
+}
