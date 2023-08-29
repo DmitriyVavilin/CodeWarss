@@ -138,5 +138,8 @@ function XO(str) {
     // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
     // XO("zzoo") => false
 }
-
+const closestMultiple10 = num => {
+    return Math.round(num / 10) * 10
+//    Given a number return the closest number to it that is divisible by 10.
+};
 
