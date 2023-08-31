@@ -1,13 +1,15 @@
 function numberToString(num) {
     return num.toString()
 }
+
 function rowSumOddNumbers(n) {
     return n * n * n
 }
+
 function index(array, n) {
-    if (array.length >= n + 1){
-        return Math.pow(array[n],n)
-    }else {
+    if (array.length >= n + 1) {
+        return Math.pow(array[n], n)
+    } else {
         return -1
     }
     // This kata is from check py.checkio.org
@@ -19,14 +21,16 @@ function index(array, n) {
 // array = [1, 2, 3, 4] and N = 2, then the result is 3^2 == 9;
 // array = [1, 2, 3] and N = 3, but N is outside of the array, so the result is -1.
 }
+
 function boolToWord(bool) {
     return bool === true ? 'Yes' : 'No'
     // Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
 }
+
 function countSheeps(arrayOfSheep) {
     let result = 0
     for (let i = 0; i < arrayOfSheep.length; i++)
-        if (arrayOfSheep[i] === true){
+        if (arrayOfSheep[i] === true) {
             result++
         }
     return result
@@ -41,6 +45,7 @@ function countSheeps(arrayOfSheep) {
     //         true, true, true, true,
     //         false, false, true, true]
 }
+
 function eachCons(array, n) {
     return array.map((x, y) => array.slice(y, y + n)).filter(x => x.length == n)
 
@@ -51,6 +56,7 @@ function eachCons(array, n) {
 //     each_cons([1,2,3,4], 3)
 // #=> [[1,2,3],[2,3,4]]
 }
+
 const binarySearch = (arr, item) => {
     let start = 0
     let end = arr.length
@@ -83,31 +89,33 @@ const linerSearch = (arr, item) => {
 }
 const firstLetterConversion = (str) => {
     const words = str.split(' ')
-    return  words.map((el, index) => {
-        if(index === 1) {
+    return words.map((el, index) => {
+        if (index === 1) {
             return el[0].toLowerCase() + el.slice(1)
-        }else{
+        } else {
             return el[0].toUpperCase() + el.slice(1)
         }
     }).join(' ')
     // const str = 'hello World'
 }
+
 function reverseWords(str) {
     const result = str.split(' ')
     const words = result.map(word => {
         return word.split('').reverse().join('')
     })
-    return  words.join(' ')
+    return words.join(' ')
 
     // Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in
     // the string should be retained.
     // "This is an example!" ==> "sihT si na !elpmaxe"
     // "double  spaces"      ==> "elbuod  secaps"
 }
+
 function solution(digits) {
     let largestSequence = 0;
     for (let i = 0; i <= digits.length - 5; i++) {
-        const sequence = digits.substring(i,5)
+        const sequence = digits.substring(i, 5)
         const sequenceNumbers = parseInt(sequence)
 
         if (sequenceNumbers > largestSequence) {
@@ -116,6 +124,7 @@ function solution(digits) {
     }
     return largestSequence
 }
+
 function XO(str) {
     str = str.toLowerCase()
     let xCount = 0
@@ -138,10 +147,12 @@ function XO(str) {
     // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
     // XO("zzoo") => false
 }
+
 const closestMultiple10 = num => {
     return Math.round(num / 10) * 10
 //    Given a number return the closest number to it that is divisible by 10.
 };
+
 function solution(nums) {
     if (!nums) {
         return []
@@ -151,6 +162,38 @@ function solution(nums) {
     //     For example:
     //     solution([1, 2, 10, 50, 5]); // should return [1,2,5,10,50]
     // solution(null); // should return []
+}
+
+function minJumps(start, end) {
+    if (start === end) {
+        return 0;
+    }
+    const dp = new Array(end + 1).fill(Infinity);
+    dp[start] = 0;
+
+    for (let i = start; i <= end; i++) {
+        if (dp[i] !== Infinity) {
+            if (i + 1 <= end) {
+                dp[i + 1] = Math.min(dp[i + 1], dp[i] + 1);
+            }
+            if (i + 3 <= end) {
+                dp[i + 3] = Math.min(dp[i + 3], dp[i] + 1);
+            }
+        }
+    }
+    return dp[end];
+
+// An infinite number of shelves are arranged one above the other in a staggered fashion.
+// The cat can jump either one or three shelves at a time: from shelf i to shelf i+1 or i+3 (the cat cannot climb on the shelf
+// directly above its head), according to the illustration:
+//     Input
+//     Start and finish shelf numbers (always positive integers, finish no smaller than start)
+//
+//     Task
+//     Find the minimum number of jumps to go from start to finish
+//
+//     Example
+//     Start 1, finish 5, then answer is 2 (1 => 4 => 5 or 1 => 2 => 5)
 }
 
 
