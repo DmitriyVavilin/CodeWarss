@@ -196,4 +196,9 @@ function minJumps(start, end) {
 //     Start 1, finish 5, then answer is 2 (1 => 4 => 5 or 1 => 2 => 5)
 }
 
+function noSpace(x){
+    const res = x.split(' ').join('')
+    return res
+//    Write a function that removes the spaces from the string, then return the resultant string.
+}
 
