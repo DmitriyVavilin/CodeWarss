@@ -202,3 +202,21 @@ function noSpace(x){
 //    Write a function that removes the spaces from the string, then return the resultant string.
 }
 
+function redistributeWealth(wealth) {
+    const totalWealth = wealth.reduce((a, b) => a + b, 0);
+    const numCitizens = wealth.length;
+    const equalShare = Math.floor(totalWealth / numCitizens);
+
+    const redistributedWealth = wealth.map(() => equalShare);
+    return redistributedWealth
+//    The year is 2088 and the Radical Marxist Socialist People's Party (RMSPP) has just seized power in Brazil.
+//
+// Their first act in power is absolute wealth equality through coercive redistribution.
+//
+// Create a function that redistributes all wealth equally among all citizens.
+//
+// Wealth is represented as an array/list where every index is the wealth of a single citizen.
+// The function should mutate the input such that every index has the same amount of wealth.
+//
+// See example:
+}
