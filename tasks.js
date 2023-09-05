@@ -220,3 +220,21 @@ function redistributeWealth(wealth) {
 //
 // See example:
 }
+
+function correctStr(string) {
+    const res = []
+    const newString = string.split('')
+    for(let i = 0; i < newString.length; i++) {
+        const currentValue = newString[i]
+        if(currentValue === '5'){
+            res.push('S')
+        }else if (currentValue === '0'){
+            res.push('O')
+        }else if(currentValue === '1') {
+            res.push('I')
+        }else {
+            res.push(currentValue)
+        }
+    }
+    return res.join('')
+}
