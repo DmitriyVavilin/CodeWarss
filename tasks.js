@@ -255,3 +255,30 @@ function warnTheSheep(queue) {
     // Note: there will always be exactly one wolf in the array.
 }
 
+function validParentheses(str) {
+    const stack = [];
+    const bracketPairs = {
+        "(": ")",
+    };
+
+    for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+        if (bracketPairs[char]) {
+            stack.push(char);
+        } else if (char === ")" || char === "]" || char === "}") {
+            const lastOpeningBracket = stack.pop();
+            if (bracketPairs[lastOpeningBracket] !== char) {
+                return false;
+            }
+        }
+    }
+    return stack.length === 0;
+// Напишите функцию, которая принимает строку круглых скобок и определяет, допустим ли порядок круглых скобок.
+// Функция должна возвращать значение true, если строка действительна и false недействительна.
+//
+// Примеры
+// "()"              =>  true
+// ")(()))"          =>  false
+// "("               =>  false
+// "(())((()())())"  =>  true
+}
