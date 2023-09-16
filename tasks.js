@@ -322,3 +322,20 @@ function countPositivesSumNegatives(arr) {
     //     Example
     // For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
 }
+
+function sumOfIntegersInString(string) {
+    const regex = /\d+/g;
+    const numbers = string.match(regex)
+
+    if(!numbers){
+        return 0
+    }
+
+    const res = numbers.reduce((acc,value) => acc + parseInt(value,10),0)
+    return res
+
+    // Your task in this kata is to implement a function that calculates the sum of the integers inside a string.
+    // For example, in the string "The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog", the sum of the integers is 3635.
+    // Note: only positive integers will be tested.
+}
+
