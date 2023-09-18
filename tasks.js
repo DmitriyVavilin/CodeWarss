@@ -354,3 +354,14 @@ function numbersWithDigitInside(x, d) {
 
     return count === 0 ? [0, 0, 0] : [count, sum, product];
 }
+
+function firstNonConsecutive (arr) {
+    for(let i = 1; i < arr.length; i++) {
+        if(arr[i] >= i + 1){
+            if(arr[i] === 6){
+                return arr[i]
+            }
+        }
+    }
+    return null
+}
