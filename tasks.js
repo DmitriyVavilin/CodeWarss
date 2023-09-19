@@ -363,3 +363,12 @@ function firstNonConsecutive(arr) {
     }
     return null;
 }
+
+function squareSum(numbers) {
+    const res = []
+    for (let i = 0; i < numbers.length; i++) {
+        const num = numbers[i] * numbers[i]
+        res.push(num)
+    }
+    return res.reduce((acc, value) => acc + value,0)
+}
