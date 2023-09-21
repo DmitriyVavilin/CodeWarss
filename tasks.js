@@ -196,7 +196,7 @@ function minJumps(start, end) {
 //     Start 1, finish 5, then answer is 2 (1 => 4 => 5 or 1 => 2 => 5)
 }
 
-function noSpace(x){
+function noSpace(x) {
     const res = x.split(' ').join('')
     return res
 //    Write a function that removes the spaces from the string, then return the resultant string.
@@ -224,15 +224,15 @@ function redistributeWealth(wealth) {
 function correctStr(string) {
     const res = []
     const newString = string.split('')
-    for(let i = 0; i < newString.length; i++) {
+    for (let i = 0; i < newString.length; i++) {
         const currentValue = newString[i]
-        if(currentValue === '5'){
+        if (currentValue === '5') {
             res.push('S')
-        }else if (currentValue === '0'){
+        } else if (currentValue === '0') {
             res.push('O')
-        }else if(currentValue === '1') {
+        } else if (currentValue === '1') {
             res.push('I')
-        }else {
+        } else {
             res.push(currentValue)
         }
     }
@@ -242,10 +242,10 @@ function correctStr(string) {
 function warnTheSheep(queue) {
     const wolfIndex = queue.indexOf('wolf')
     const sheepNumber = queue.length - wolf - 1
-    if (wolfIndex === queue.length - 1){
+    if (wolfIndex === queue.length - 1) {
         return "Pls go away and stop eating my sheep"
-    }else {
-        return  `Oi! Sheep number ${sheepNumber}! You are about to be eaten by a wolf!`
+    } else {
+        return `Oi! Sheep number ${sheepNumber}! You are about to be eaten by a wolf!`
     }
     //Wolves have been reintroduced to Great Britain. You are a sheep farmer, and are now plagued by wolves which pretend to be sheep. Fortunately, you are good at spotting them.
     //
@@ -284,12 +284,12 @@ function validParentheses(str) {
 }
 
 
-const minNumber = function(list){
+const minNumber = function (list) {
     const maxNum = Math.max(...list)
     return maxNum
 }
 
-const maxNumber = function(list){
+const maxNumber = function (list) {
     const minNum = Math.min(...list)
     return minNum
     //Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language )
@@ -327,11 +327,11 @@ function sumOfIntegersInString(string) {
     const regex = /\d+/g;
     const numbers = string.match(regex)
 
-    if(!numbers){
+    if (!numbers) {
         return 0
     }
 
-    const res = numbers.reduce((acc,value) => acc + parseInt(value,10),0)
+    const res = numbers.reduce((acc, value) => acc + parseInt(value, 10), 0)
     return res
 
     // Your task in this kata is to implement a function that calculates the sum of the integers inside a string.
@@ -370,5 +370,19 @@ function squareSum(numbers) {
         const num = numbers[i] * numbers[i]
         res.push(num)
     }
-    return res.reduce((acc, value) => acc + value,0)
+    return res.reduce((acc, value) => acc + value, 0)
+}
+
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin) {
+    if (dolphin) {
+        sharkSpeed /= 2;
+    }
+    const timeToPontoon = pontoonDistance / youSpeed;
+    const timeToYou = sharkDistance / sharkSpeed;
+
+    if (timeToPontoon < timeToYou) {
+        return "Живой!";
+    } else {
+        return "Наживка для акулы!";
+    }
 }
