@@ -386,3 +386,7 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin) {
         return "Наживка для акулы!";
     }
 }
+
+function sayHello(name, city, state) {
+    return `Hello, ${name.map(el => el).join(' ')}! Welcome to ${city}, ${state}!`
+}
