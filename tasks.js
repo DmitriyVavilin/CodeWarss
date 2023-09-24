@@ -390,3 +390,13 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin) {
 function sayHello(name, city, state) {
     return `Hello, ${name.map(el => el).join(' ')}! Welcome to ${city}, ${state}!`
 }
+
+function squareOrSquareRoot(arr) {
+    return arr.map((number) => {
+        if (Number.isInteger(Math.sqrt(number))) {
+            return Math.sqrt(number);
+        } else {
+            return number * number;
+        }
+    });
+}
