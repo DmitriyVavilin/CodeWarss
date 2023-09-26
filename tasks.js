@@ -400,3 +400,11 @@ function squareOrSquareRoot(arr) {
         }
     });
 }
+
+
+function betterThanAverage(classScores, yourScore) {
+    const sumClassScores = classScores.reduce((total, score) => total + score, 0);
+    const averageClassScore = sumClassScores / classScores.length;
+
+    return yourScore > averageClassScore;
+}
