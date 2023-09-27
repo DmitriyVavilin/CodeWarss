@@ -408,3 +408,15 @@ function betterThanAverage(classScores, yourScore) {
 
     return yourScore > averageClassScore;
 }
+
+function isOpposite(s1,s2){
+    if (s1.length!=s2.length || s1=='' || s2=='') return false
+
+    arr1=s1.split('')
+    arr2=s2.split('')
+
+    for(var i=0;i<arr1.length;i++){
+        if (arr1[i]==arr2[i]) return false
+    }
+    return true
+}
