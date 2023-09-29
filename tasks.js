@@ -420,3 +420,9 @@ function isOpposite(s1,s2){
     }
     return true
 }
+
+function rakeGarden(garden) {
+    const words = garden.split(' ');
+    const result = words.map(word => word !== 'rock' && word !== 'gravel' ? 'gravel' : word).join(' ');
+    return result;
+}
