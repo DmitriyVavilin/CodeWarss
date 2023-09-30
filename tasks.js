@@ -426,3 +426,7 @@ function rakeGarden(garden) {
     const result = words.map(word => word !== 'rock' && word !== 'gravel' ? 'gravel' : word).join(' ');
     return result;
 }
+
+function descendingOrder(n) {
+    return parseInt(String(n).split('').sort((a, b) => b - a).join(''), 10);
+}
