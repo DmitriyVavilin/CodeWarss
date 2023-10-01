@@ -430,3 +430,18 @@ function rakeGarden(garden) {
 function descendingOrder(n) {
     return parseInt(String(n).split('').sort((a, b) => b - a).join(''), 10);
 }
+
+function solution(digits) {
+    let maxProduct = 0;
+
+    for (let i = 0; i <= digits.length - 5; i++) {
+        const fiveDigitString = digits.slice(i, i + 5);
+        const fiveDigitNumber = +fiveDigitString;
+
+        if (fiveDigitNumber > maxProduct) {
+            maxProduct = fiveDigitNumber;
+        }
+    }
+
+    return maxProduct;
+}
