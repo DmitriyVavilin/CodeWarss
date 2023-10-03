@@ -445,3 +445,13 @@ function solution(digits) {
 
     return maxProduct;
 }
+
+function validateUsr(username) {
+    if (username.length < 4 || username.length > 16) {
+        return false;
+    }
+    if (!/^[a-z0-9_]+$/.test(username)) {
+        return false;
+    }
+    return !/^\d/.test(username);
+}
