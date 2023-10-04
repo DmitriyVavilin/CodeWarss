@@ -455,3 +455,10 @@ function validateUsr(username) {
     }
     return !/^\d/.test(username);
 }
+
+function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
+    const ages = [age1, age2, age3, age4, age5, age6, age7, age8];
+    const sumOfSquares = ages.reduce((sum, age) => sum + age * age, 0);
+    const squareRoot = Math.sqrt(sumOfSquares);
+    return Math.floor(squareRoot / 2);
+}
