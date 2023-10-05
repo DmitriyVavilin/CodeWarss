@@ -462,3 +462,9 @@ function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
     const squareRoot = Math.sqrt(sumOfSquares);
     return Math.floor(squareRoot / 2);
 }
+
+function XOO(str) {
+    const xCount = (str.match(/x/gi) || []).length; // 'x' or 'X'
+    const oCount = (str.match(/o/gi) || []).length; // 'o' or 'O'
+    return xCount === oCount;
+}
