@@ -468,3 +468,9 @@ function XOO(str) {
     const oCount = (str.match(/o/gi) || []).length; // 'o' or 'O'
     return xCount === oCount;
 }
+
+function fakeBin(x){
+    x=x.replace(/[0-4]/g,'0')
+    x=x.replace(/[5-9]/g,'1')
+    return x
+}
